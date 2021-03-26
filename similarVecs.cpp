@@ -12,7 +12,7 @@
 using namespace std;
 
 // Long Version
-bool similar_vecs_long(vector<int> vec1, vector<int> vec2)
+bool similarVecsLong(vector<int> vec1, vector<int> vec2)
 {
     if (vec1.size() != vec2.size()) return false;
     
@@ -43,7 +43,7 @@ bool similar_vecs_long(vector<int> vec1, vector<int> vec2)
 }
 
 // Short (Clever) Version
-bool similar_vecs_short(vector<int> vec1, vector<int> vec2)
+bool similarVecsShort(vector<int> vec1, vector<int> vec2)
 {
     int counter = 0, equal = 1;
     for (int i = 0; i < vec1.size(); i++)
@@ -62,16 +62,16 @@ bool similar_vecs_short(vector<int> vec1, vector<int> vec2)
 
 int main()
 {
-    cout << boolalpha << similar_vecs_long({1, 2, 3}, {1, 2, 3}) << endl;                                    // true
-    cout << boolalpha << similar_vecs_long({1, 2, 3}, {2, 1, 3}) << endl;                                    // true
-    cout << boolalpha << similar_vecs_long({1, 2, 2}, {2, 1, 1}) << endl;                                    // false
-    cout << boolalpha << similar_vecs_long({1, 1, 4}, {1, 2, 3}) << endl;                                    // false
-    cout << boolalpha << similar_vecs_long({2, 3, 1}, {1, 3, 2}) << endl;                                    // true
+    cout << boolalpha << similarVecsLong({1, 2, 3}, {1, 2, 3}) << endl;                                    // true
+    cout << boolalpha << similarVecsLong({1, 2, 3}, {2, 1, 3}) << endl;                                    // true
+    cout << boolalpha << similarVecsLong({1, 2, 2}, {2, 1, 1}) << endl;                                    // false
+    cout << boolalpha << similarVecsLong({1, 1, 4}, {1, 2, 3}) << endl;                                    // false
+    cout << boolalpha << similarVecsLong({2, 3, 1}, {1, 3, 2}) << endl;                                    // true
 
-    cout << boolalpha << similar_vecs_short({832, 998, 148, 570, 533, 561, 894, 147, 455, 279},
-                                            {832, 998, 148, 570, 533, 561, 455, 147, 894, 279}) << endl;     // true
-    cout << boolalpha << similar_vecs_short({832, 998, 148, 570, 533, 561, 894, 147, 455, 279},
-                                            {832, 570, 148, 998, 533, 561, 455, 147, 894, 279}) << endl;     // false
-    cout << boolalpha << similar_vecs_short({1, 2, 2, 2, 2, 2, 3, 4},
-                                            {1, 3, 2, 2, 2, 2, 2, 4}) << endl;                               // true
+    cout << boolalpha << similarVecsShort({832, 998, 148, 570, 533, 561, 894, 147, 455, 279},
+                                          {832, 998, 148, 570, 533, 561, 455, 147, 894, 279}) << endl;     // true
+    cout << boolalpha << similarVecsShort({832, 998, 148, 570, 533, 561, 894, 147, 455, 279},
+                                          {832, 570, 148, 998, 533, 561, 455, 147, 894, 279}) << endl;     // false
+    cout << boolalpha << similarVecsShort({1, 2, 2, 2, 2, 2, 3, 4},
+                                          {1, 3, 2, 2, 2, 2, 2, 4}) << endl;                               // true
 }

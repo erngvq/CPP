@@ -8,7 +8,7 @@
 #include <unordered_set>
 using namespace std;
 
-void print_hangman(int try_num)
+void printHangman(int try_num)
 {
     string file = "./data/hang_try_0";
 
@@ -53,14 +53,14 @@ void print_hangman(int try_num)
     in.close();
 }
 
-void print_guess(vector<string> &guess)
+void printGuess(vector<string> &guess)
 {
     cout << endl;
     for (int i = 0; i < guess.size(); i++) cout << guess[i];
     cout << endl << endl;
 }
 
-string get_word()
+string getWord()
 {
     termios disable;
     tcgetattr(STDIN_FILENO, &disable);
@@ -81,7 +81,7 @@ string get_word()
 
 int main(int argc, char *argv[])
 {
-    string word = get_word();
+    string word = getWord();
     vector<string> guess(word.length());
     char first = word[0];
     guess[0].append("  ");
@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
     // }
     // cout << endl << endl;
 
-    print_guess(guess);
+    printGuess(guess);
 
     int try_num = 0;
     while (try_num <= 6)
@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
         if (myset.count(tmp))
         {
             cout << "It seems like you already guessed this character (or was provided for you). Try again!" << endl;
-            print_guess(guess);
+            printGuess(guess);
             continue;
         }
         else if (mymap[tmp].size() >= 1)
@@ -148,7 +148,7 @@ int main(int argc, char *argv[])
         }
         else if (try_num == 6)
         {
-            print_hangman(try_num);
+            printHangman(try_num);
             cout << endl;
             cout << "	---ANSWER >> " << word << "---" << endl;
             return 0;
@@ -156,13 +156,13 @@ int main(int argc, char *argv[])
         else
         {
             myset.insert(tmp);
-            print_hangman(try_num);
+            printHangman(try_num);
             try_num++;
             if (try_num == 6) cout << "WRONG GUESS :). You only have one try left!" << endl;
             else cout << "WRONG GUESS. You have " << 7 - try_num << " tries left!" << endl;
         }
         mymap.erase(tmp);
-        print_guess(guess);
+        printGuess(guess);
 
         if (mymap.size() == 0 && try_num == 6)
         {

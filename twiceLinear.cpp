@@ -23,7 +23,7 @@ using namespace std;
 class DoubleLinear
 {
 public:
-    static int dbl_linear(unsigned int n)
+    static int dblLinear(unsigned int n)
     {
         vector<int> myvec{1};
         int i = 0, j = 0;
@@ -57,10 +57,10 @@ public:
 int main()
 {
     DoubleLinear dl;
-    cout << dl.dbl_linear(10) << endl;
-    cout << dl.dbl_linear(20) << endl;
-    cout << dl.dbl_linear(30) << endl;
-    cout << dl.dbl_linear(40) << endl;
-    cout << dl.dbl_linear(50) << endl;
-    cout << dl.dbl_linear(100) << endl;
+    cout << dl.dblLinear(10) << endl;
+    cout << dl.dblLinear(20) << endl;
+    cout << dl.dblLinear(30) << endl;
+    cout << dl.dblLinear(40) << endl;
+    cout << dl.dblLinear(50) << endl;
+    cout << dl.dblLinear(100) << endl;
 }

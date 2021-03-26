@@ -9,15 +9,13 @@
 #include <vector>
 using namespace std;
 
-bool reaching_last(vector<int> vec)
+bool reachingLast(vector<int> vec)
 {
     int last_idx = vec.size() - 1;
     int before_last = vec.size() - 2;
 
     for (int i = before_last; i >= 0; i--)
-    {
         if (last_idx <= vec[i] + i) last_idx = i;
-    }
     return !last_idx;
 }
 
@@ -28,10 +26,10 @@ int main()
     vector<int> vec3 = {1, 0, 1, 1, 4}; // returns false
     vector<int> vec4 = {1, 1, 1, 1, 1}; // returns true
 
-    cout << boolalpha << reaching_last(vec1) << endl;
-    cout << boolalpha << reaching_last(vec2) << endl;
-    cout << boolalpha << reaching_last(vec3) << endl;
-    cout << boolalpha << reaching_last(vec4) << endl;
+    cout << boolalpha << reachingLast(vec1) << endl;
+    cout << boolalpha << reachingLast(vec2) << endl;
+    cout << boolalpha << reachingLast(vec3) << endl;
+    cout << boolalpha << reachingLast(vec4) << endl;
     
     return 0;
 }

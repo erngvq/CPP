@@ -50,7 +50,7 @@
 #include <map>
 using namespace std;
 
-string traverse_TCP_states(const vector<string> &events)
+string traverseTCPStates(const vector<string> &events)
 {
     map<pair<string, string>, string> mymap;
     string answer = "";
@@ -98,9 +98,9 @@ int main()
     vector<string> input4{"APP_ACTIVE_OPEN", "RCV_SYN_ACK", "RCV_FIN"};
     vector<string> input5{"APP_ACTIVE_OPEN", "RCV_SYN_ACK", "RCV_FIN", "APP_CLOSE"}; 
 
-    cout << traverse_TCP_states(input1) << endl; // returns "ESTABLISHED"
-    cout << traverse_TCP_states(input2) << endl; // returns "SYN_SENT"
-    cout << traverse_TCP_states(input3) << endl; // returns "ERROR"
-    cout << traverse_TCP_states(input4) << endl; // returns "CLOSED"
-    cout << traverse_TCP_states(input5) << endl; // returns "LAST_ACK"
+    cout << traverseTCPStates(input1) << endl; // returns "ESTABLISHED"
+    cout << traverseTCPStates(input2) << endl; // returns "SYN_SENT"
+    cout << traverseTCPStates(input3) << endl; // returns "ERROR"
+    cout << traverseTCPStates(input4) << endl; // returns "CLOSED"
+    cout << traverseTCPStates(input5) << endl; // returns "LAST_ACK"
 }

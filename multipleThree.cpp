@@ -12,9 +12,9 @@
  * ----------------------------------------------------------------------------------------------
  * Examples:
  * 
- * multiple_of_3("000") should print true
- * multiple_of_3("001") should print false
- * multiple_of_3("011") should print true
+ * multipleThree("000") should print true
+ * multipleThree("001") should print false
+ * multipleThree("011") should print true
  * ----------------------------------------------------------------------------------------------
  */
 
@@ -22,22 +22,22 @@
 #include <regex>
 using namespace std;
 
-void multiple_of_3(string binary_str)
+void multipleThree(string binary_str)
 {
-    regex multiple_of_3_regex("(1(01*0)*1|0)*");
+    regex re("(1(01*0)*1|0)*");
 
-    if (regex_match(binary_str, multiple_of_3_regex)) cout << boolalpha << true << endl;
+    if (regex_match(binary_str, re)) cout << boolalpha << true << endl;
     else cout << boolalpha << false << endl;
 }
 
 int main()
 {
-    multiple_of_3("");      // true
-    multiple_of_3(" 0");    // false
-    multiple_of_3("abc");   // false
-    multiple_of_3("000");   // true
-    multiple_of_3("110");   // true
-    multiple_of_3("111");   // false
-    multiple_of_3("011");   // true
-    multiple_of_3("101111000110000101001110"); // 12345678 --> true
+    multipleThree("");      // true
+    multipleThree(" 0");    // false
+    multipleThree("abc");   // false
+    multipleThree("000");   // true
+    multipleThree("110");   // true
+    multipleThree("111");   // false
+    multipleThree("011");   // true
+    multipleThree("101111000110000101001110"); // 12345678 --> true
 }

@@ -8,7 +8,7 @@
 #include <string>
 using namespace std;
 
-string reverse_in_parentheses(string str)
+string reversePar(string str)
 {
     string ret = "";
     int idx = 0;
@@ -34,11 +34,11 @@ string reverse_in_parentheses(string str)
 }
 
 int main()
-{                                                                                       // Outputs
-    cout << reverse_in_parentheses("(bar)")                                  << endl;   // "rab"
-    cout << reverse_in_parentheses("foo(bar)baz")                            << endl;   // "foorabbaz"
-    cout << reverse_in_parentheses("foo(bar)baz(blim")                       << endl;   // "foorabbazmilb"
-    cout << reverse_in_parentheses("foo(bar(baz))blim")                      << endl;   // "foobazrabblim"
-    cout << reverse_in_parentheses("")                                       << endl;   // ""
-    cout << reverse_in_parentheses("foo((bar)ren(baz))blim(ab(cd(ef)gh)ij)") << endl;   // "foobaznerbarblimjicdfeghba"
+{
+    cout << reversePar("(bar)")                                  << endl;   // "rab"
+    cout << reversePar("foo(bar)baz")                            << endl;   // "foorabbaz"
+    cout << reversePar("foo(bar)baz(blim")                       << endl;   // "foorabbazmilb"
+    cout << reversePar("foo(bar(baz))blim")                      << endl;   // "foobazrabblim"
+    cout << reversePar("")                                       << endl;   // ""
+    cout << reversePar("foo((bar)ren(baz))blim(ab(cd(ef)gh)ij)") << endl;   // "foobaznerbarblimjicdfeghba"
 }
