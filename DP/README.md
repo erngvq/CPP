@@ -9,3 +9,11 @@
 * Write a function `howSum(target, numbers)` that returns an array containing ANY combination of elements that add up to exactly the target integer. If there is no combination that adds up to the target, return null.
 
 * Write a function `bestSum(target, numbers)` that returns an array containing the SHORTEST combination of numbers that add up to exactly the target integer. If there is a tie for the shortest combination, return any of them.
+
+* Write a function `canConstruct(target, wordBank)` that accepts a target string and an array of strings. The function should return a boolean indicating whether or not the target can be constructed by concatenating elements of the word bank array. Elements from the word bank may be reused as many times as needed.
+
+* Write a function `canConstruct(target, wordBank)` that returns the number of ways that the target can be constructed by concatenating elements of the word bank array. As before, elements from the word bank may be reused as many times as needed.
+
+* Write a function `allConstruct(target, wordBank)` that returns a 2D array containing all the ways that the target can be constructed by concatenating elements of the word bank array. Each element of the 2D array should represent one combination that constructs the target. As before, elements from the word bank may be reused as many times as needed.
+
+* Given an integer array representing coins of different denominations and an integer representing a total amount of money, write a function `coinChange(coins, amount)` that return the fewest number of coins that you need to make up that amount. Assume that there is an infinite number of each kind of coin; however, if the amount of money specified cannot be made up by any combination of the coins, return -1.
