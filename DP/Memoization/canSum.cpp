@@ -24,11 +24,11 @@ bool canSum(int target, vector<int> numbers, unordered_map<int, bool> &memo)
 
 int main()
 {
-    vector<pair<int, vector<int>>> tests{{7, {2, 3}},
-                                         {7, {5, 3, 4, 7}},
-                                         {7, {2, 4}},
-                                         {7, {2, 3, 5}},
-                                         {300, {7, 14}}};
+    vector<pair<int, vector<int>>> tests{{7, {2, 3}},           // true
+                                         {7, {5, 3, 4, 7}},     // true
+                                         {7, {2, 4}},           // false
+                                         {7, {2, 3, 5}},        // true
+                                         {300, {7, 14}}};       // false
     for (pair<int, vector<int>> test : tests)
     {
         unordered_map<int, bool> memo;
