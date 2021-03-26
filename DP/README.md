@@ -4,4 +4,8 @@
 
 * Imagine you are a traveler on a 2D grid. You begin in the top-left corner and your goal is to travel to the bottom-right corner. However, you many only move down or right. Write a function `gridTraveler(m, n)` that computes how many ways you can travel to the goal on a grid with dimensions `m * n`.
 
+* Write a function `canSum(target, numbers)` that returns a boolean indicating whether or not it is possible to generate the target using the number from the array. An element from the array many be used as many times as needed, and assume all input numbers are non-negative.
 
+* Write a function `howSum(target, numbers)` that returns an array containing ANY combination of elements that add up to exactly the target integer. If there is no combination that adds up to the target, return null.
+
+* Write a function `bestSum(target, numbers)` that returns an array containing the SHORTEST combination of numbers that add up to exactly the target integer. If there is a tie for the shortest combination, return any of them.
