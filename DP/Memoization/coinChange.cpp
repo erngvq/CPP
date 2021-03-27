@@ -6,8 +6,7 @@ using namespace std;
 
 vector<int> recurse(int amount, vector<int> coins, unordered_map<int, vector<int>> &memo)
 {
-    if (memo.find(amount) != memo.end())
-        return memo[amount];
+    if (memo.find(amount) != memo.end()) return memo[amount];
 
     if (amount == 0) return {};
     if (amount < 0) return {-1};
@@ -33,7 +32,6 @@ vector<int> recurse(int amount, vector<int> coins, unordered_map<int, vector<int
 int coinChange(vector<int> &coins, int amount)
 {
     if (amount == 0) return 0;
-    sort(coins.begin(), coins.end(), greater<int>());
 
     unordered_map<int, vector<int>> memo;
     vector<int> ret = recurse(amount, coins, memo);

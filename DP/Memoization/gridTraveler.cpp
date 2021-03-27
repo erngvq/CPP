@@ -10,9 +10,9 @@ double gridTraveler(int m, int n, map<pair<int, int>, double> &memo)
 
     if (memo[{m, n}]) return memo[{m, n}];
     
-    memo[{m, n}] = grid_traveler(m - 1, n, memo) + grid_traveler(m, n - 1, memo);
+    memo[{m, n}] = gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo);
     
-    // Interestingly, grid_traveler(m, n) == grid_traveler(n, m)
+    // Interestingly, gridTraveler(m, n) == gridTraveler(n, m)
     memo[{n, m}] = memo[{m, n}];
     return memo[{m, n}];
 }

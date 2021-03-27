@@ -36,6 +36,6 @@ int main()
     for (auto test : tests)
     {
         unordered_map<string, int> memo;
-        cout << boolalpha << countConstruct(test.first, test.second, memo) << endl;
+        cout << countConstruct(test.first, test.second, memo) << endl;
     }
 }

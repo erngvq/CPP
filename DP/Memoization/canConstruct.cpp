@@ -31,6 +31,7 @@ bool canConstruct(string target, vector<string> wordBank, unordered_map<string, 
 int main()
 {
     vector<pair<string, vector<string>>> tests{
+        {"purple", {"purp", "p", "ur", "le", "purpl"}},                                                 // true
         {"abcdef", {"ab", "abc", "cd", "def", "abcd"}},                                                 // true
         {"skateboard", {"bo", "rd", "ate", "t", "ska", "sk", "boar"}},                                  // false
         {"enterapotentpot", {"a", "p", "ent", "enter", "ot", "o", "t"}},                                // true
